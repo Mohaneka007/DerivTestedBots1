@@ -1,0 +1,33 @@
+<deriv-bot>
+  <symbol>EURUSD</symbol>
+  <strategy>
+    <name>Simple Moving Average</name>
+    <parameters>
+      <period>50</period>
+      <source>close</source>
+    </parameters>
+    <entry-rule>
+      <condition>
+        <type>crossabove</type>
+        <source>close</source>
+        <target>sma</target>
+      </condition>
+    </entry-rule>
+    <exit-rule>
+      <condition>
+        <type>crossbelow</type>
+        <source>close</source>
+        <target>sma</target>
+      </condition>
+    </exit-rule>
+  </strategy>
+  <risk-management>
+    <stop-loss>50</stop-loss>
+    <take-profit>100</take-profit>
+  </risk-management>
+  <webhook>
+    <url>(link unavailable)</url>
+    <method>POST</method>
+    <format>JSON</format>
+  </webhook>
+</deriv-bot>
